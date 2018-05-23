@@ -1,0 +1,26 @@
+[flake8]
+format = ${cyan}%(path)s${reset}:${yellow_bold}%(row)d${reset}:${green_bold}%(col)d${reset}: ${red_bold}%(code)s${reset} %(text)s
+max-line-length = 120
+htmldir = flake_html
+count = True
+max-complexity = 15
+ignore = E121,E123,E126,E133,E226,E241,E242,E704,W503,D100,D101,D102,D103
+exclude =
+    __init__.py
+    *.css
+    *.csv
+    *.js
+    *.less
+    *.md
+    *.png
+    *.po
+    *.scss
+    *.txt
+    *.xml
+    *.yml
+    *.html
+    .flake8
+    .coveragerc
+    Dockerfile
+    .gitignore
+    .eslint/*

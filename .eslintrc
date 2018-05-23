@@ -1,0 +1,143 @@
+{
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "globals": {
+	    "DOCUMENT_ROOT": true,
+        "odoo": true,
+        "horanet": true
+    },
+	"rules": {
+		"array-bracket-spacing": [
+			1,
+			"always",
+			{
+				"singleValue": false,
+				"objectsInArrays": false,
+				"arraysInArrays": false
+			}
+		],
+		"no-unused-vars": [1, {"vars": "all", "args": "after-used"}],
+		"block-spacing": 1,
+		"brace-style": [
+			1,
+			"1tbs",
+			{ "allowSingleLine": true }
+		],
+		"camelcase": 2,
+		"comma-spacing": [
+			1,
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"comma-style": [
+			1,
+			"last"
+		],
+		"default-case": 2,
+		"eqeqeq": 2,
+		"func-style": 2,
+		"id-length": [
+			2,
+			{
+				"min": 2,
+				"exceptions": [ "i","j","x","y" ]
+			}
+		],
+		"indent": [
+			2,
+			4,
+			{ "SwitchCase": 1 }
+		],
+		"key-spacing": [
+			1,
+			{
+				"align":"value",
+				"beforeColon":false,
+				"afterColon":true
+			}
+		],
+		"keyword-spacing": [
+			1,
+			{
+				"before": true,
+				"after": true
+			}
+		],
+		"linebreak-style": [
+			2,
+			"unix"
+		],
+		"lines-around-comment": [
+			1,
+			{
+				"beforeBlockComment": true,
+				"afterBlockComment": false,
+				"allowObjectStart": true,
+				"allowObjectEnd": true
+			}
+		],
+		"no-console": 0,
+		"no-lonely-if": 2,
+		"no-mixed-spaces-and-tabs": [
+			1,
+			"smart-tabs"
+		],
+		"no-multiple-empty-lines": [
+			2,
+			{
+				"maxBOF": 0,
+				"max": 2,
+				"maxEOF": 1
+			}
+		],
+		"no-new-require": 2,
+		"no-new-symbol": 2,
+		"no-redeclare": 2,
+		"no-trailing-spaces": 1,
+		"no-unneeded-ternary": 2,
+		"no-whitespace-before-property": 1,
+		"object-property-newline": 2,
+		"one-var": [
+			2,
+			"never"
+		],
+		"one-var-declaration-per-line": [
+			2,
+			"always"
+		],
+		"padded-blocks": [
+			2,
+			"never"
+		],
+		"require-jsdoc": [
+			2,
+			{
+				"require": {
+					"FunctionDeclaration": true,
+					"MethodDefinition": true,
+					"ClassDeclaration": true
+				}
+			}
+		],
+		"semi": [
+			2,
+			"always"
+		],
+		"semi-spacing": [
+			2,
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		"space-before-blocks": 2,
+		"space-before-function-paren": [
+			2,
+			"always"
+		]
+	}
+}
