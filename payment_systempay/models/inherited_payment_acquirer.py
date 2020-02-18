@@ -10,14 +10,14 @@ from odoo.tools import float_round
 class SystemPayAcquirer(models.Model):
     _inherit = 'payment.acquirer'
 
-    provider = fields.Selection(selection_add=[('systempay', 'SystemPay')])
+    provider = fields.Selection(selection_add=[('systempay', "SystemPay")])
 
-    systempay_shop_id = fields.Char(string='Shop ID', required_if_provider='systempay')
-    systempay_test_cert = fields.Char(string='Test certificate', required_if_provider='systempay')
-    systempay_prod_cert = fields.Char(string='Prod certificate', required_if_provider='systempay')
+    systempay_shop_id = fields.Char(string="Shop ID", required_if_provider='systempay')
+    systempay_test_cert = fields.Char(string="Test certificate", required_if_provider='systempay')
+    systempay_prod_cert = fields.Char(string="Prod certificate", required_if_provider='systempay')
     systempay_form_action_url = fields.Char(
-        string='Form action URL',
-        default='https://paiement.systempay.fr/vads-payment/',
+        string="Form action URL",
+        default="https://paiement.systempay.fr/vads-payment/",
         required_if_provider='systempay'
     )
 
@@ -60,7 +60,7 @@ class SystemPayAcquirer(models.Model):
         elif self.environment == 'prod':
             data.append(self.systempay_prod_cert)
 
-        signature = '+'.join(data)
+        signature = str('+').join(data)
 
         return hashlib.sha1(signature.encode('utf8')).hexdigest()
 
