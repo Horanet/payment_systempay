@@ -6,10 +6,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- Migration v11
 
-## [10.0.1.0.1]
-### Added
-- Module creation
-- Change amount calculation to avoid rounding issues
-
-[Unreleased]: https://gitlab.horanet.com/ingenierie/projets/default_theme/compare/10.0.1.0.1...HEAD
+[Unreleased]: https://github.com/Horanet/payment_systempay/compare/10.0.1.0.1...dev-11.0
