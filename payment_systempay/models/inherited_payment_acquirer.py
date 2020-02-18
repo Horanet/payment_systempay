@@ -1,7 +1,5 @@
-# coding: utf8
-
 import hashlib
-import urlparse
+import urllib.parse
 import uuid
 from datetime import datetime
 
@@ -48,7 +46,7 @@ class SystemPayAcquirer(models.Model):
         """
         self.ensure_one()
 
-        systempay_values = {k: v for k, v in values.items() if 'vads_' in k}
+        systempay_values = {k: v for k, v in list(values.items()) if 'vads_' in k}
         data = []
 
         for _, value in sorted(systempay_values.items()):
@@ -83,7 +81,7 @@ class SystemPayAcquirer(models.Model):
         if self.environment == 'prod':
             mode = 'PRODUCTION'
 
-        values = dict((k, v) for k, v in values.items() if v)
+        values = dict((k, v) for k, v in list(values.items()) if v)
         systempay_tx_values = dict(values)
         systempay_tx_values.update({
             'vads_site_id': self.systempay_shop_id,
@@ -98,7 +96,7 @@ class SystemPayAcquirer(models.Model):
             'vads_payment_config': 'SINGLE',
             'vads_version': 'V2',
             'vads_return_mode': 'GET',
-            'vads_url_return': '%s' % urlparse.urljoin(base_url, values.get('return_url')),
+            'vads_url_return': '%s' % urllib.parse.urljoin(base_url, values.get('return_url')),
             'vads_order_id': values.get('reference').replace('/', ' '),
 
             'vads_cust_id': values.get('partner_id'),
