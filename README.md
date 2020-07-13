@@ -9,4 +9,7 @@
 
 ## Install addon via pip:
 
-`pip install -e git+https://github.com/Horanet/payment_systempay.git@11.0#egg=odoo11-addon-payment-systempay`
+
+```ruby
+pip install "git+https://github.com/Horanet/payment_systempay.git@11.0#egg=odoo11-addon-payment-systempay&subdirectory=setup/payment_systempay"
+```
