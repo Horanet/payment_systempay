@@ -15,4 +15,4 @@ class SystemPayController(http.Controller):
 
         request.env['payment.transaction'].form_feedback(kw, 'systempay')
 
-        return werkzeug.utils.redirect('/')
+        return werkzeug.utils.redirect('/', 303)
